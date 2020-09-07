@@ -1,0 +1,32 @@
+plugins {
+    id "jacoco"
+    id "java"
+    id "application"
+    id "org.sonarqube" version "3.0"
+}
+
+description = 'Example of SonarQube Scanner for Gradle Usage'
+version = '1.0'
+
+sonarqube {
+    properties {
+        property 'sonar.projectName', 'Example of SonarQube Scanner for Gradle Usage'
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'com.google.guava:guava:21.0'
+    testCompile 'junit:junit:4.12'
+}
+
+mainClassName = 'App'
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
