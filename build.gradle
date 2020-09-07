@@ -13,7 +13,6 @@ sonarqube {
         property 'sonar.projectName', 'Example of SonarQube Scanner for Gradle Usage'
         property 'sonar.sourceEncoding', 'UTF-8'
         property 'sonar.branch', 'master'
-        property 'sonar.projectKey' 'sonar-gradle'
     }
 }
 
