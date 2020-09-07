@@ -4,11 +4,12 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
+	    /*
         stage('SCM') {
             steps {
                 git branch: 'master', credentialsId: 'pdadi1210', url: 'https://github.com/pdadi1210/sonar-gradle.git'
             }
-        }
+        }*/
         stage('build && SonarQube analysis') {
             steps {
                 withSonarQubeEnv('sonarserver') {
